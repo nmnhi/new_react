@@ -19,7 +19,10 @@ class MyComponent extends React.Component {
             country: event.target.value
         })
     }
-
+    
+    handleClickButton = () =>{
+        alert("Submit Success!!!")
+    }
 
     render() {
         let name = "Minh Nhi"
@@ -27,7 +30,6 @@ class MyComponent extends React.Component {
 
         return(
             <>
-
                 <div className="first">
                     {/* {console.log("My name is ", name)} */}
                     Hello everyone, my name is {name}
@@ -58,7 +60,9 @@ class MyComponent extends React.Component {
                     My country is {this.state.country}
                 </div>
 
-                
+                <div className="third">
+                    <button onClick={() => this.handleClickButton()}> Click Me</button>
+                </div>
 
             </>
         )
