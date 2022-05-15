@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.scss';
+import MyComponent from './Example/MyComponent';
+import Welcome from '../components/testComponent';
+
+// 2 component: class component / function component(function, arrow)
+// JSX
 
 function App() {
+  // Arrow function
+// const App() = () =>{
   return (
     <div className="App">
       <header className="App-header">
-        <h1>
-          Hello World
-        </h1>
+        <Welcome/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Hello World. This is React project of Minh Nhi
@@ -20,6 +25,9 @@ function App() {
         >
           Learn React
         </a>
+        {/*shortcut style*/}
+        <MyComponent/> 
+        {/* <MyComponent></MyComponent> */}
       </header>
     </div>
   );
