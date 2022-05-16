@@ -12,6 +12,7 @@ class MyComponent extends React.Component {
     }
 
     handleOnChangeName = (event) => {
+        // this.state.name = event.target.value;
         this.setState({
             name: event.target.value
         })
