@@ -1,5 +1,7 @@
 import React from "react";
 import Test from "../../components/childComponent";
+import SecondChild from "../../components/secondChild";
+
 
 class Form extends React.Component {
     state = {
@@ -50,6 +52,7 @@ class Form extends React.Component {
                     />
                 </form>
                 <Test/>
+                <SecondChild/>
                 
             </>
       )
