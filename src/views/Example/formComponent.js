@@ -1,5 +1,5 @@
 import React from "react";
-import childForm from "./childForm";
+import Welcome from "./childComponent";
 
 class Form extends React.Component {
     state = {
@@ -51,7 +51,7 @@ class Form extends React.Component {
                     <br /><br />
                 </form>
 
-                <childForm/>
+                <Welcome/>
                 
             </>
       )
