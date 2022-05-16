@@ -2,10 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 
 // import MyComponent from './Example/MyComponent';
-// import Welcome from '../components/testComponent';
 import Form from './Example/formComponent';
-
-
 // 2 component: class component / function component(function, arrow)
 // JSX
 
@@ -34,6 +31,7 @@ function App() {
 
         {/* Test With Component formComponent */}
         <Form/>
+        {/* <MyComponent/> */}
       </header>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Welcome from "./childComponent";
+import Test from "../../components/childComponent";
 
 class Form extends React.Component {
     state = {
@@ -48,10 +48,8 @@ class Form extends React.Component {
                     <input type="submit"
                         onClick={(event) => this.handleSubmit(event)}
                     />
-                    <br /><br />
                 </form>
-
-                <Welcome/>
+                <Test/>
                 
             </>
       )
