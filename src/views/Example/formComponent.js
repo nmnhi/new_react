@@ -1,12 +1,16 @@
 import React from "react";
-import Test from "../../components/childComponent";
-import SecondChild from "../../components/secondChild";
-
+import ChildComponent from "../../components/childComponent";
+import ConditionOutput from "../../components/ConditionOutput";
 
 class Form extends React.Component {
     state = {
         firstName: "",
-        lastName: ""
+        lastName: "",
+        arrJobs: [
+            {id: "Engineer", title: "Developer", salary: "500"},
+            {id: "Senior Engineer", title: "Tester", salary: "400"},
+            {id: "Director", title: "PM", salary: "1000"}
+        ]
     }
 
     handleChangeFirstName = (event) => {
@@ -51,8 +55,22 @@ class Form extends React.Component {
                         onClick={(event) => this.handleSubmit(event)}
                     />
                 </form>
-                <Test/>
-                <SecondChild/>
+                {/* Props */}
+                <ChildComponent
+                    name={this.state.firstName}
+                    age={"28"}
+                    address={"Ha Noi"}
+                    arrJobs={this.state.arrJobs}
+                />
+
+                {/* Condition Output */}
+                <ConditionOutput
+                    name={this.state.firstName}
+                    age={"28"}
+                    address={"Ha Noi"}
+                    arrJobs={this.state.arrJobs}
+                />
+                
                 
             </>
       )
