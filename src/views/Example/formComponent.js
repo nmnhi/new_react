@@ -1,5 +1,5 @@
 import React from "react";
-import ChildComponent from "../../components/childComponent";
+// import ChildComponent from "../../components/childComponent";
 import ConditionOutput from "../../components/ConditionOutput";
 
 class Form extends React.Component {
@@ -56,12 +56,12 @@ class Form extends React.Component {
                     />
                 </form>
                 {/* Props */}
-                <ChildComponent
+                {/* <ChildComponent
                     name={this.state.firstName}
                     age={"28"}
                     address={"Ha Noi"}
                     arrJobs={this.state.arrJobs}
-                />
+                /> */}
 
                 {/* Condition Output */}
                 <ConditionOutput

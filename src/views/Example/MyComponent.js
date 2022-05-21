@@ -1,4 +1,7 @@
 import React from "react";
+import ConditionOutput from "../../components/ConditionOutput";
+
+
 
 class MyComponent extends React.Component {
 
@@ -6,9 +9,15 @@ class MyComponent extends React.Component {
         JSX => return block
     */
     // key:value
+  
     state = {
-        name: "David",
-        country: "American"
+        firstName: "",
+        lastName: "",
+        arrJobs: [
+            {id: "Engineer", title: "Developer", salary: "500"},
+            {id: "Senior Engineer", title: "Tester", salary: "400"},
+            {id: "Director", title: "PM", salary: "1000"}
+        ]
     }
 
     handleOnChangeName = (event) => {
@@ -65,6 +74,9 @@ class MyComponent extends React.Component {
                     <button onClick={() => this.handleClickButton()}> Click Me</button>
                 </div>
 
+                <ConditionOutput
+                    arrJobs={this.state.arrJobs}
+                />
             </>
         )
     }

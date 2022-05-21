@@ -12,12 +12,23 @@ class ConditionOutput extends React.Component {
                 showJobs: !this.state.showJobs
             })
     }
+
+    handleOnclickDelete = (job) =>{
+        console.log(">>>Handle click me: ", job)
+        this.props.deleteAJob(job);
+        
+        // alert("Delete Sucess!!!")
+    }
+
+
     render() {
 
         let {arrJobs} = this.props;
         let {showJobs} = this.state;
         let check = showJobs === true ? "showJobs = True" : "showJobs = false";
         console.log(">>> Check condition: ", check)
+
+
         return(
             <>
                 {showJobs === false ?
@@ -26,21 +37,22 @@ class ConditionOutput extends React.Component {
                     </div>
                     :
                     <>
-                        <div>
-                            <button onClick={() => this.handleShowHide()}>Hide</button>
-                        </div>
                         <div className="job-list">
                         {
                             arrJobs.map((item, index) => {
                                 return(
                                     <div key={item.id}>
                                         {item.title} - {item.salary}
+                                        <></> <span onClick={() => this.handleOnclickDelete(item)}>x</span>
                                     </div>
                                 )
                             }
                             
                             )
                         } 
+                        </div>
+                        <div>
+                            <button onClick={() => this.handleShowHide()}>Hide</button>
                         </div>
                         
                     </>
